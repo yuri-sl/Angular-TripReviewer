@@ -15,5 +15,23 @@
       "nome": "Praia",
       "descricao": "Praias legais para visitar"
     }
+  ],
+  "lugares": [
+    {
+      "id": "2d5d",
+      "nome": "Restaurante Mineiro",
+      "categoria": "Restaurante refinado",
+      "localizacao": "MG",
+      "urlFoto": "aaaaa",
+      "avaliacao": "4"
+    },
+    {
+      "id": "e6ff",
+      "nome": "Liberdade",
+      "categoria": "shopping",
+      "localizacao": "São Paulo",
+      "urlFoto": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Marginal_Pinheiros_e_Jockey_Club.jpg/330px-Marginal_Pinheiros_e_Jockey_Club.jpg",
+      "avaliacao": "4"
+    }
   ]
 }

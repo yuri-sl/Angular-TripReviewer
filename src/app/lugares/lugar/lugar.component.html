@@ -20,6 +20,27 @@
         </div>
         <div class="mb-4">
             <label for="categoria" class="block text-gray-600 font-medium mb-2">Categoria:</label>
+            <select
+                id="categoria"
+                name="categoria"
+                formControlName="categoria"
+                class="w-full p-3 border border-gray-300 rounded shadow-sm :hover cursor-pointer focus:outline-none focus:ring focus:ring-blue-400"
+                required
+            >
+            <option [value]="" class=":hover cursor-pointer">
+                Selecione uma categoria                
+            </option>
+            @for (cat of categorias; track $index) {
+                <option class=":hover cursor-pointer" [value]="cat.nome">
+                    {{cat.nome}}
+                </option>
+            }
+            </select>
+            @if (isCampoInvalido('categoria')) {
+                <span class="text-red-500 text-sm">
+                    Campo obrigatório
+                </span>
+            }
         </div>
         <!--Campo item formulário-->
         <div class="mb-4">
@@ -56,6 +77,27 @@
         </div>
         <div class="mb-4">
             <label for="avaliacao" class="block text-gray-600 font-medium mb-2">Avaliacao:</label>
+            <select
+                id="avaliacao"
+                name="avaliacao"
+                formControlName="avaliacao"
+                class="w-full p-3 border border-gray-300 rounded shadow-sm :hover cursor-pointer focus:outline-none focus:ring focus:ring-blue-400"
+                required
+            >
+            <option [value]="" class=":hover cursor-pointer">
+                Selecione uma avaliação                
+            </option>
+            <option [value]="1">1 - Péssimo</option>
+            <option [value]="2">2 - Ruim</option>
+            <option [value]="3">3 - Regular</option>
+            <option [value]="4">4 - Muito Bom</option>
+            <option [value]="5">5 - Excelente</option>
+            </select>
+            @if (isCampoInvalido('avaliacao')) {
+                <span class="text-red-500 text-sm">
+                    Campo obrigatório
+                </span>
+            }
         </div>
         <!-- Enviar formulário -->
         <div class="mb-4">

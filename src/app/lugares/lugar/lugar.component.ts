@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup, Validators } from '@angular/forms';
 import { CategoriaClass } from '../../categorias/categoria/categoria-class';
 import { CategoriaService } from '../../categorias/categoria.service';
+import { LugarService } from '../lugar.service';
 
 @Component({
   selector: 'app-lugar',
@@ -16,7 +17,8 @@ export class Lugar implements OnInit{
 
 
   constructor(private fb:FormBuilder,
-    private categoriaService:CategoriaService
+    private categoriaService:CategoriaService,
+    private lugarService:LugarService
   ){
     this.criarLugarForm = fb.group({
       nome:['',Validators.required],
@@ -27,20 +29,25 @@ export class Lugar implements OnInit{
     })
   }
   isCampoInvalido(campo:string){
-    return this.criarLugarForm.get(campo)?.valid;      
+    return this.criarLugarForm.get(campo)?.invalid && this.criarLugarForm.get(campo)?.touched;      
   }
   onSubmit(){
     console.log(this.criarLugarForm.value);
     if(this.criarLugarForm.valid){
       console.log("Campos enviados: "+this.criarLugarForm.value);
-      this.salvarCategoria();
+      this.salvarLugar();
     }
   }
   ngOnInit(): void {
     this.buscarCategoriasCadastradas();
   }
-  salvarCategoria(){
+  salvarLugar(){
     console.log("Salvando");
+    this.lugarService.cadastrarNovoLugar(this.criarLugarForm.value).subscribe({
+      next:(res) => console.log(res),
+      error:(err) => console.error(err)
+    })
+    this.criarLugarForm.reset();
   }
 
 
