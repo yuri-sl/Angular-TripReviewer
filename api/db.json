@@ -1,0 +1,14 @@
+{
+  "categorias": [
+    {
+      "id": "2",
+      "nome": "shopping",
+      "descricao": "Fazer compras e passear"
+    },
+    {
+      "id": "1",
+      "nome": "Restaurante refinado",
+      "descricao": "Lugar caro"
+    }
+  ]
+}
