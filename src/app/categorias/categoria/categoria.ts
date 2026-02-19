@@ -50,7 +50,8 @@ export class Categoria implements OnInit {
   criarNovaCategoria(criarCategoriaForm:FormGroup){
     this.categoriaService.salvarCategoria(criarCategoriaForm.value).subscribe({
       next: (res) => {
-        console.log(res)
+        console.log(res);
+        this.criarCategoriaForm.reset();
       },
       error: (err) => 
         {
