@@ -9,6 +9,11 @@
       "id": "1",
       "nome": "Restaurante refinado",
       "descricao": "Lugar caro"
+    },
+    {
+      "id": "b1c9",
+      "nome": "Praia",
+      "descricao": "Praias legais para visitar"
     }
   ]
 }
