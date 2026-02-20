@@ -10,16 +10,28 @@ const routes: Routes = [
       {
         path: 'categorias',
         loadChildren: () => import('../categorias/categorias-module').then(m => m.CategoriasModule),
-        pathMatch:'full'
+        pathMatch:'full',
+        data:{
+          tituloPagina:'Categorias',
+          subtituloPagina:'Realize o cadastro de novas categorias'
+        }
       },{
         path:'lugares',
         loadChildren: () => import('../lugares/lugares.module').then(m => m.LugaresModule),
-        pathMatch:'full'
+        pathMatch:'full',
+        data:{
+          tituloPagina:'Lugares',
+          subtituloPagina:'Realize o cadastro de novos lugares legais'
+        }
       },
       {
         path:'galeria',
         loadChildren: () => import('../galeria/galeria.module') .then(m => m.GaleriaModule),
-        pathMatch:'full'
+        pathMatch:'full',
+        data:{
+          tituloPagina:'Galeria de lugares legais',
+          subtituloPagina:'Descubra os melhores lugares legais'
+        }
       }
     ]
   }

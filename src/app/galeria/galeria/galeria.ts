@@ -69,7 +69,7 @@ export class Galeria implements OnInit{
     this.lugarService.obterLugaresFiltrados(nomeLugarPesquisa,categoriaPesquisada).subscribe({
       next:(res) => {
         console.log(res);
-        this.lugaresFiltrados = res;
+        this.lugaresBuscados = res;
       },
       error:(err) => console.error(err)
     })

@@ -1,10 +1,10 @@
 <header class="bg-gradient-to-r from-blue-500 to-blue-700 text-white p-6 shadow-lg">
     <div class="text-center">
         <h1 class="text-3x1 font-bold">
-            Título
+            {{props.tituloPagina}}
         </h1>
         <p class="text-lg mt-2">
-            Subtitulo
+            {{props.subtituloPagina}}
         </p>
     </div>
     <div class="mt-4">
@@ -28,7 +28,7 @@
                 > Lugares </a>
             </li>
             <li>
-                <a class="hover:text-yellow-300">Sair</a>
+                <a class="hover:text-yellow-300" routerLink="/paginas">Sair</a>
             </li>
         </ul>
     </nav>

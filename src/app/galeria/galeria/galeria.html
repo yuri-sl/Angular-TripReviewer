@@ -7,7 +7,7 @@
         <div class="flex flex-col flex-row items-center justify-center gap-4">
             <input formControlName="lugar" id="lugar" name="lugar" type="text" placeholder="Buscar pelo nome do local" class="w-full border border-gray-300 p-2 rounded shadow-sm focus: ring focus:ring-blue-500">
             <select formControlName="categoria" class="w-full border border-gray-300 p-2 rounded shadow-sm focus:ring focus:ring-blue-500">
-                <option [value]="">Todas as categorias</option>
+                <option [value]="-1">Todas as categorias</option>
                 @for (cat of categoriasFiltro; track $index) {
                     <option [value]="cat.nome">
                         {{cat.nome}}
