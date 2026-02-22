@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LayourProps } from './layoutprops';
 import { filter,map } from 'rxjs';
+import { Authgoogle } from '../../authgoogle';
 @Component({
   selector: 'app-layout',
   standalone: false,
@@ -9,7 +10,10 @@ import { filter,map } from 'rxjs';
   styleUrl: './layout.scss',
 })
 export class Layout implements OnInit {
-  constructor(private router:Router,private activatedRoute:ActivatedRoute){
+  constructor(private router:Router,
+    private activatedRoute:ActivatedRoute,
+    private loginService:Authgoogle
+  ){
   }
   baseUrl:string = 'http://localhost:4200/paginas/';
 
@@ -38,6 +42,9 @@ export class Layout implements OnInit {
     //Captura o objeto data e seta ele Layoutprops
     return rotaFilha?.snapshot.data as LayourProps;
 
+  }
+  logout(){
+    this.loginService.logout();
   }
 
 }
