@@ -1,0 +1,42 @@
+{
+  "categorias": [
+    {
+      "id": "2",
+      "nome": "shopping",
+      "descricao": "Fazer compras e passear"
+    },
+    {
+      "id": "1",
+      "nome": "Restaurante refinado",
+      "descricao": "Lugar caro"
+    },
+    {
+      "id": "b1c9",
+      "nome": "Praia",
+      "descricao": "Praias legais para visitar"
+    },
+    {
+      "nome": "Restaurante Prod",
+      "descricao": "restaurante em produção",
+      "id": "hot6Rjz"
+    }
+  ],
+  "lugares": [
+    {
+      "id": "2d5d",
+      "nome": "Restaurante Mineiro",
+      "categoria": "Restaurante refinado",
+      "localizacao": "MG",
+      "urlFoto": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/3b/90/d6/o-melhor-da-gastronomia.jpg?w=900&h=500&s=1",
+      "avaliacao": "4"
+    },
+    {
+      "id": "e6ff",
+      "nome": "Liberdade",
+      "categoria": "shopping",
+      "localizacao": "São Paulo",
+      "urlFoto": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Marginal_Pinheiros_e_Jockey_Club.jpg/330px-Marginal_Pinheiros_e_Jockey_Club.jpg",
+      "avaliacao": "4"
+    }
+  ]
+}

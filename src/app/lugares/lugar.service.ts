@@ -3,6 +3,7 @@ import { HttpClient,HttpParams } from '@angular/common/http';
 import { FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { Lugar } from './lugar.class';
+import {environment} from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +11,8 @@ import { Lugar } from './lugar.class';
 export class LugarService {
   constructor(private http:HttpClient){
   }
-  baseURL:string = 'http://localhost:3000/lugares'
+  apiUrl:string = environment.apiUrl;
+  baseURL:string = this.apiUrl+'/'+'lugares';
 
   cadastrarNovoLugar(cadastroLugarForm:Lugar):Observable<Lugar>{
     return this.http.post<Lugar>(this.baseURL,cadastroLugarForm);
